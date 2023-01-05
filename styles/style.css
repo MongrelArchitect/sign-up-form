@@ -6,9 +6,66 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  background-color: #eee;
+  font-family: Verdana, sans-serif;
   height: 100vh;
   width: 100vw;
+}
+
+button {
+  background-color: #edb628;
+  border: 0;
+  box-shadow: 1px 1px 2px #444;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px 15px 30px;
+  margin-bottom: 30px;
+}
+
+button:active {
+  box-shadow: 0 0 0;
+  scale: 0.99;
+}
+
+input {
+  border: 1px solid #e5e7eb;
+  font-size: 18px;
+  padding: 10px;
+}
+
+input:focus {
+  box-shadow: 2px 2px 0 #edb628;
+  border: 1px solid #edb628;
+  outline: none;
+}
+
+input:not(:placeholder-shown):invalid {
+  box-shadow: 2px 2px 0 #d00;
+  border: 1px solid #d00;
+  outline: none;
+}
+
+input:valid {
+  box-shadow: 2px 2px 0 #0a0;
+  border: 1px solid #0a0;
+  outline: none;
+}
+
+label {
+  font-size: 13px;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .attributions {
@@ -31,6 +88,7 @@ body {
 }
 
 .container {
+  background-color: #eee;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -38,7 +96,37 @@ body {
 }
 
 .content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
   width: 50%;
+}
+
+.content > p {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.1;
+  max-width: 800px;
+  padding: 0 50px 0 50px;
+}
+
+.form {
+  box-shadow: 0 3px 5px #aaa;
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  padding: 25px 50px 25px 50px;
+}
+
+.form p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .image {
@@ -47,7 +135,7 @@ body {
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-  max-width: 800px;
+  max-width: 600px;
   width: 50%;
 }
 
@@ -56,7 +144,7 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 138px;
   padding: 20px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -70,4 +158,21 @@ body {
   color: #fff;
   font-family: "Secular One", sans-serif;
   font-size: 3rem;
+}
+
+.submit-area {
+  font-size: 18px;
+  line-height: 1.1;
+  max-width: 800px;
+  padding: 0 50px 0 50px;
+}
+
+.submit-area a {
+  color: #990000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#password-message {
+  color: #900;
 }
